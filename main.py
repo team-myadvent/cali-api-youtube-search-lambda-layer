@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 BINARY_LOCATION = "/opt/chrome/chrome"
 EXECUTABLE_PATH = "/opt/chromedriver"
-
+MAX_RESULTS = 10
 
 def handler(event=None, context=None):
     query = event.get("query")
@@ -26,7 +26,7 @@ def handler(event=None, context=None):
     videos = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "ytd-video-renderer")))
 
     results = []
-    for video in videos:
+    for video in videos[:MAX_RESULTS]:
         title = video.find_element(By.CSS_SELECTOR, "#video-title").text
         link = video.find_element(By.CSS_SELECTOR, "#video-title").get_attribute("href")
         video_id = link.split("v=")[-1].split("&")[0]
