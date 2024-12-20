@@ -29,7 +29,8 @@ Daily calls: 100 (average).
 Execution duration: 10 seconds per invocation (average).
 
 Using the AWS Lambda free-tier resources
-- memeory: 4096MB
+- memeory: 3000MB
+    - **aws lambda limit the memory allocation 3008**
 
 ![image](https://github.com/user-attachments/assets/f0a053bf-8c99-42cc-a6f7-f327cc443ac4)
 
