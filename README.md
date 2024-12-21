@@ -8,19 +8,15 @@ AWS Lambda service layer by Youtube data API v3 and selenium crawling
 
 ## Quick Start
 
-first. "Run deploy scripts"
+1. "Run deploy scripts"
 
 ```bash
 sh deploy.sh
 ```
 
-second. "Create the lambda function"
+2. "Create the lambda function"
 
-> "I used AWS managed console"
-
-![image](https://github.com/user-attachments/assets/75e9a7a0-2335-429a-ae06-51a6a19c1877)
-
-third. "Custom configuration"
+3. "Custom configuration"
 
 function call count
 * Youtube Data API V3 call blocked: When the API quota limit is reached, the Lambda Function is triggered to perform the crawling operation instead.
@@ -35,8 +31,7 @@ Using the AWS Lambda free-tier resources
 ![image](https://github.com/user-attachments/assets/f0a053bf-8c99-42cc-a6f7-f327cc443ac4)
 
 
-
-final. "Test"
+4. "Test"
 
 > "Set event"
 
